@@ -1,0 +1,37 @@
+digraph cfg {
+	label="13.bin.asm.json.cfg.dep___imp__NSClassFromString_122004.dot"
+	labelloc=t
+		n0 [shape=octagon, label="#0\nDepSinkNode#122003\nCfgBLXNode\n\n\nBLX		_NSClassFromString\nCallerStack:[\n]\nDepKey:\nR0",style=filled];
+		n1 [shape=box, label="#1\nDepTmpNode#45512\nCfgCallExternCFunctNode\nR0 : R0\n\n\nisExternal=true\nParamDepKeys:[\nR0 (#45506 STR		R0, [SP,#0x128+var_104])\n]\n__imp__objc_retain @ /usr/lib/libobjc.A.dylib\nCallerStack:[\n122001\n]\nDepKey:\nR0"];
+		n2 [shape=ellipse, label="#2\nDepUnionNode\n\n"];
+		n3 [shape=box, label="#3\nDepTmpNode#45511\nCfgLDRNode\nR15 : {__imp__objc_retain}\n\n\nLDR		PC, =__imp__objc_retain\nCallerStack:[\n122001\n]\nDepKey:\nR0"];
+		n4 [shape=box, label="#4\nDepTmpNode#122000\nCfgBLXNode\n\n\nBLX		_objc_retain\nCallerStack:[\n]\nDepKey:\nR0"];
+		n5 [shape=box, label="#5\nDepTmpNode#121998\nCfgNormalCmdNode\n\n\nSUB		SP, SP,	#0xC\nCallerStack:[\n]\nDepKey:\nR2"];
+		n6 [shape=box, label="#6\nDepTmpNode#121993\nCfgBLXNode\n\n\nBLX		_objc_msgSend\nCallerStack:[\n]\nDepKey:\nR2"];
+		n7 [shape=ellipse, label="#7\nDepUnionNode#22111\nCfgSbrtNode\nR0 : {IASKSpecifier instance}\nR1 : {classFromString:}\n\n\nSubroutine: __IASKSpecifier_classFromString__\nCallerStack:[\n]\nDepKey:\nR2"];
+		n8 [shape=box, label="#8\nDepTmpNode#121988\nCfgMOVNode\nR0 : {selRef_classFromString_,-,1123256}\n\n\nMOV		R0, #(selRef_classFromString_ -	0x1123B8)\nCallerStack:[\n]\nDepKey:\nR5"];
+		n9 [shape=box, label="#9\nDepTmpNode#121986\nCfgCallSbrtNode\n\n\nisExternal=false\nParamDepKeys:[\nR3 (#121711 STR		R3, [SP,#0x6C+var_3C])\n,R1 (#121681 STR		R1, [SP,#0x6C+var_58])\n,R0 (#117484 STR		R0, [SP,#0x6C+var_1C])\n,R6 (#117479 STR		R6, [SP,#0x6C+var_20])\n,R6 (#117432 STR		R6, [SP,#0x6C+var_64])\n]\nSubroutine: _objc_retainAutoreleasedReturnValue\nCallerStack:[\n]\nDepKey:\nR0"];
+		n10 [shape=box, label="#10\nDepTmpNode#45473\nCfgCallExternCFunctNode\nR0 : R0\n\n\nisExternal=true\nParamDepKeys:[\nR8 (#45449 STR.W		R8, [SP,#0xC+var_10]!)\n]\n__imp__objc_retainAutoreleasedReturnValue @ /usr/lib/libobjc.A.dylib\nCallerStack:[\n121986\n]\nDepKey:\nR0"];
+		n11 [shape=ellipse, label="#11\nDepUnionNode\n\n"];
+		n12 [shape=box, label="#12\nDepTmpNode#45472\nCfgLDRNode\nR15 : {__imp__objc_retainAutoreleasedReturnValue}\n\n\nLDR		PC, =__imp__objc_retainAutoreleasedReturnValue\nCallerStack:[\n121986\n]\nDepKey:\nR0"];
+		n13 [shape=box, label="#13\nDepTmpNode#121985\nCfgBLXNode\n\n\nBLX		_objc_retainAutoreleasedReturnValue\nCallerStack:[\n]\nDepKey:\nR0"];
+		n14 [shape=house, label="#14\nDepUnknownNode\n\n\nReason:\nCOULD_BE_UNKNOWN_CALLABLE_RETURN_VALUE\nMax Callers: null\nsubroutine: null\nSbrt. Node ID: null\nCFunction Name : null\nCall Extern CFunction Node Id : null\nExtern. Method : null\nCall Extern. Method Node Id : null\nCall Unknown Node Id : 121983\nLocation Label : null\nLocation Node Id : null",style=filled];
+		n2 -> n1 [label="#1"];
+		n1 -> n3 [label=""];
+		n3 -> n4 [label=""];
+		n4 -> n5 [label=""];
+		n5 -> n7 [label=""];
+		n7 -> n6 [label="#1"];
+		n6 -> n8 [label=""];
+		n8 -> n9 [label=""];
+		n11 -> n10 [label="#1"];
+		n10 -> n12 [label=""];
+		n12 -> n13 [label=""];
+		n13 -> n14 [label=""];
+		n9 -> n11 [label=""];
+		n0 -> n2 [label=""];
+
+
+
+
+}

@@ -1,0 +1,25 @@
+digraph cfg {
+	label="9.bin.asm.json.cfg.dep___imp__NSClassFromString_558325.dot"
+	labelloc=t
+		n31 [shape=octagon, label="#31\nDepSinkNode#558324\nCfgBLXNode\n\n\nBLX		_NSClassFromString\nCallerStack:[\n]\nDepKey:\nR0",style=filled];
+		n32 [shape=box, label="#32\nDepTmpNode#558322\nCfgCallSbrtNode\n\n\nisExternal=false\nParamDepKeys:[\nR8 (#558311 STR.W		R8, [SP,#0xC+var_10]!)\n]\nSubroutine: sub_BEC44\nCallerStack:[\n]\nDepKey:\nR6"];
+		n33 [shape=box, label="#33\nDepTmpNode#558316\nCfgCallSbrtNode\n\n\nisExternal=false\nParamDepKeys:[\nR8 (#558311 STR.W		R8, [SP,#0xC+var_10]!)\n]\nSubroutine: _objc_retain\nCallerStack:[\n]\nDepKey:\nR0"];
+		n34 [shape=box, label="#34\nDepTmpNode#48864\nCfgCallExternCFunctNode\nR0 : R0\n\n\nisExternal=true\nParamDepKeys:[\nR5 (#48860 STR		R5, [SP,#0xA8+var_8C])\n,R3 (#48849 STR		R3, [SP,#0xA8+var_A8])\n,R1 (#48661 STR		R1, [SP,#0xA8+var_70])\n,R0 (#48656 STR		R0, [SP,#0xA8+var_74])\n,R1 (#48854 STR		R1, [SP,#0xA8+var_48])\n,R1 (#48638 STR		R1, [SP,#0xA8+var_28])\n...]\n__imp__objc_retain @ /usr/lib/libobjc.A.dylib\nCallerStack:[\n558316\n]\nDepKey:\nR0"];
+		n35 [shape=ellipse, label="#35\nDepUnionNode\n\n"];
+		n36 [shape=box, label="#36\nDepTmpNode#48863\nCfgLDRNode\nR15 : {__imp__objc_retain}\n\n\nLDR		PC, =__imp__objc_retain\nCallerStack:[\n558316\n]\nDepKey:\nR0"];
+		n37 [shape=box, label="#37\nDepTmpNode#558315\nCfgBLXNode\n\n\nBLX		_objc_retain\nCallerStack:[\n]\nDepKey:\nR0"];
+		n38 [shape=box, label="#38\nDepTmpNode#558312\nCfgMOVNode\nR5 : R0\n\n\nMOV		R5, R0\nCallerStack:[\n]\nDepKey:\nR3"];
+		n39 [shape=house, label="#39\nDepUnknownNode\n\n\nReason:\nNO_CALLER_CALL_TO_SUBROUTINE\nMax Callers: null\nsubroutine: __DDLog_setLogLevel_forClassWithName__\nSbrt. Node ID: 28279\nCFunction Name : null\nCall Extern CFunction Node Id : null\nExtern. Method : null\nCall Extern. Method Node Id : null\nCall Unknown Node Id : null\nLocation Label : null\nLocation Node Id : null",style=filled];
+		n31 -> n32 [label=""];
+		n32 -> n33 [label=""];
+		n35 -> n34 [label="#1"];
+		n34 -> n36 [label=""];
+		n36 -> n37 [label=""];
+		n37 -> n38 [label=""];
+		n38 -> n39 [label=""];
+		n33 -> n35 [label=""];
+
+
+
+
+}

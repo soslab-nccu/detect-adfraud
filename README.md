@@ -31,7 +31,9 @@ This GitHub provides the scripts and the configure file to run Static Ad Fraud D
  
 ## Data
 
-[The Generated JSON Files(Extracted segment information)](http://soslab.nccu.edu.tw/binflowjson)
+Due to the copyright of Apple and App developers, we cannot provide the application in App Store, we provide the [segment information](http://soslab.nccu.edu.tw/binflowjson) instead.
+
+In [Pirate App Store](https://iphonecake.com/), we can download applications from the website. We will get the several applications from the app list of each genre. We extract the binary of the apps. The binary can be analyzed with disassembler tools(IDA Pro). We generate the assembly, segment information and control flow graph for each app.  We find 5 apps violate Interstitial violation Ad fraud and 1 app violates Multi-view violation Ad fraud within 22 apps. We will present the information about the violation with table and pictures. We also provide the app list through this [folder link](https://drive.google.com/drive/folders/16eQnRMmlhle0VXuklvnkhr-CpUMYtH-l?usp=sharing).
 
 ## Control Flow Graph Construction
 
@@ -39,7 +41,7 @@ We will first construct the control flow graph (CFG) for each App with their Ext
 
 ### Example  
 
-Here is a sample result of [Control Flow Graph](https://drive.google.com/drive/folders/1-OzaXvSFnUzi2z7KqI4ds9vWOjnvHguY?usp=sharing)
+Here is the sample result of [Control Flow Graph of App Store](https://drive.google.com/drive/folders/1-OzaXvSFnUzi2z7KqI4ds9vWOjnvHguY?usp=sharing) and [Control Flow Graph of Pirate App Store](https://drive.google.com/drive/folders/1rIvOTVI1blHWS5GEtqRD2vwKbPmevPcO)
 
 ### Command
 
@@ -90,7 +92,13 @@ The adinterstitial outputs of sdgs are in two formats: 1) an internal format for
 3. result.txt
 
 ### Example
+
 ![](./example-inter-1.png)
+
+
+### Example in Pirate App Store
+
+![](./pirate/inter/13/13.bin.asm.json.cfg.dep___imp__NSClassFromString_257096.dot.png)
 
 ---
 
@@ -154,9 +162,14 @@ The adnumber report result will be writed in the `record.txt`
 | 1095262475.bin.asm.json.cfg |  CfgSbrtNode  | 107007 | 0 | true | RevMobVideoViewController |RevMobVideoViewControllerAdView |
 | 299515267.bin.asm.json.cfg |  CfgSbrtNode  | 23197 | 2 | true | ViewController | FBAdView |
 
-### Example of adNode
+### Example 
 
 ![](./example-admulti-1.png)
+
+
+### Example in Pirate App Store
+
+![](./pirate/multi/3.bin.asm.json.cfg.dep___imp__NSClassFromString_1047668.dot.png)
 
 ---
 
@@ -188,7 +201,7 @@ The adoverlay report result be writed in the `record.txt`
 | 335335524.bin.asm.json.cfg  |  CfgSbrt | 104901  |   true | ImmViewController | ImmAdView | NoExpression |
 | 335335524.bin.asm.json.cfg  |  CfgSbrt | 104901  |   true | ImmViewController | ImmFullView  | NoExpression |
 
-### Example of fullNode
+### Example
 
 ![](./example-adfull-1.png)
 
@@ -197,6 +210,8 @@ The adoverlay report result be writed in the `record.txt`
 
 ## More Information
 
-* [The Generated Assembly, CFGs, SDGs of Some Sampled Apps](http://140.119.19.247:10988/s/DvFqqO9bTiPx5LC)  
+* [The Generated Assembly, CFGs, SDGs of Sampled Apps](http://140.119.19.247:10988/s/DvFqqO9bTiPx5LC)  
 
 * [BinFlow: Static Detection of API Call Vulnerabilities in iOS Executables](https://github.com/soslab-nccu/binflow)
+
+* [The Generated IPA, Binary, Assembly, CFGs of Apps in Pirate App Store](https://drive.google.com/drive/folders/16eQnRMmlhle0VXuklvnkhr-CpUMYtH-l?usp=sharing)

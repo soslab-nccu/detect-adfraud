@@ -1,0 +1,25 @@
+digraph cfg {
+	label="9.bin.asm.json.cfg.dep___imp__NSClassFromString_558265.dot"
+	labelloc=t
+		n22 [shape=octagon, label="#22\nDepSinkNode#558264\nCfgBLXNode\n\n\nBLX		_NSClassFromString\nCallerStack:[\n]\nDepKey:\nR0",style=filled];
+		n23 [shape=box, label="#23\nDepTmpNode#558262\nCfgCallSbrtNode\n\n\nisExternal=false\nParamDepKeys:[\n]\nSubroutine: sub_BEC44\nCallerStack:[\n]\nDepKey:\nR5"];
+		n24 [shape=box, label="#24\nDepTmpNode#558256\nCfgCallSbrtNode\n\n\nisExternal=false\nParamDepKeys:[\n]\nSubroutine: _objc_retain\nCallerStack:[\n]\nDepKey:\nR0"];
+		n25 [shape=box, label="#25\nDepTmpNode#48864\nCfgCallExternCFunctNode\nR0 : R0\n\n\nisExternal=true\nParamDepKeys:[\nR5 (#48860 STR		R5, [SP,#0xA8+var_8C])\n,R3 (#48849 STR		R3, [SP,#0xA8+var_A8])\n,R1 (#48661 STR		R1, [SP,#0xA8+var_70])\n,R0 (#48656 STR		R0, [SP,#0xA8+var_74])\n,R1 (#48854 STR		R1, [SP,#0xA8+var_48])\n,R1 (#48638 STR		R1, [SP,#0xA8+var_28])\n...]\n__imp__objc_retain @ /usr/lib/libobjc.A.dylib\nCallerStack:[\n558256\n]\nDepKey:\nR0"];
+		n26 [shape=ellipse, label="#26\nDepUnionNode\n\n"];
+		n27 [shape=box, label="#27\nDepTmpNode#48863\nCfgLDRNode\nR15 : {__imp__objc_retain}\n\n\nLDR		PC, =__imp__objc_retain\nCallerStack:[\n558256\n]\nDepKey:\nR0"];
+		n28 [shape=box, label="#28\nDepTmpNode#558255\nCfgBLXNode\n\n\nBLX		_objc_retain\nCallerStack:[\n]\nDepKey:\nR0"];
+		n29 [shape=box, label="#29\nDepTmpNode#558253\nCfgMOVNode\nR4 : R0\n\n\nMOV		R4, R0\nCallerStack:[\n]\nDepKey:\nR2"];
+		n30 [shape=house, label="#30\nDepUnknownNode\n\n\nReason:\nNO_CALLER_CALL_TO_SUBROUTINE\nMax Callers: null\nsubroutine: __DDLog_logLevelForClassWithName__\nSbrt. Node ID: 28275\nCFunction Name : null\nCall Extern CFunction Node Id : null\nExtern. Method : null\nCall Extern. Method Node Id : null\nCall Unknown Node Id : null\nLocation Label : null\nLocation Node Id : null",style=filled];
+		n22 -> n23 [label=""];
+		n23 -> n24 [label=""];
+		n26 -> n25 [label="#1"];
+		n25 -> n27 [label=""];
+		n27 -> n28 [label=""];
+		n28 -> n29 [label=""];
+		n29 -> n30 [label=""];
+		n24 -> n26 [label=""];
+
+
+
+
+}
